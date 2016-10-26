@@ -1,0 +1,16 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+@if (ViewBag.WellThatDidntWork == true)
+{
+    <div class="alert alert-danger">Well, that didn't work :|</div>
+}
+<form action="~/Home/ExecuteCommand" method="get">
+    <div class="form-group command">
+        <label for="command">COMMAND : </label>
+        <select class="form-control" id="command" name="command">
+            <option value="open-the-pod-bay-doors">Open the pod bay doors</option>
+        </select>
+    </div>
+    <button class="btn btn-lg btn-block btn-primary">Execute Command</button>
+</form>
